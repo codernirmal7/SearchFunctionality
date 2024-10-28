@@ -24,18 +24,18 @@ export default function SearchBox() {
 
   return (
     <>
-      <div className="w-full h-[14rem]  bg-gradient-to-r from-blue-700 to-teal-400 flex flex-col justify-center items-center">
+      <section className="w-full h-[14rem]  bg-gradient-to-r from-blue-700 to-teal-400 flex flex-col justify-center items-center px-4">
         <div className="flex flex-col gap-5 justify-center items-center max-w-lg w-full">
           <h1 className="text-4xl lg:text-5xl font-bold text-white">
             Search For products
           </h1>
           <div className="w-full h-12 rounded-full pr-3 flex items-center bg-slate-100 gap-3 ">
-            <div className="h-full rounded-l-full bg-blue-700 p-4 flex items-center">
+            <div className="h-full rounded-l-full bg-blue-500 p-4 flex items-center">
               <FaSearch color="white" />
             </div>
             <input
               type="text"
-              className="h-full w-full bg-transparent border-none outline-none text-xl"
+              className="h-full w-full bg-transparent border-none outline-none text-base md:text-xl"
               value={searchValue}
               onChange={onChangeSearchValue}
               placeholder="Search products"
@@ -51,7 +51,7 @@ export default function SearchBox() {
           )}
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }
