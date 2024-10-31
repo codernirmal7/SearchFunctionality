@@ -2,8 +2,13 @@ import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 
-export default function SearchBox() {
-  const [searchValue, setSearchValue] = useState<string>("")
+type SearchBoxProps = {
+  searchValue: string;
+  setSearchValue: (value: string) => void;
+}
+
+
+const SearchBox: React.FC<SearchBoxProps> = ({ searchValue, setSearchValue }) => {
   const [isShowClearBtn , setIsShowClearBtn] = useState<boolean>(false)
 
   const onChangeSearchValue = (event: React.ChangeEvent<HTMLInputElement>):void=>{
@@ -21,6 +26,8 @@ export default function SearchBox() {
   const clearSearchValue = ():void=>{
     setSearchValue("")
   }
+
+  
 
   return (
     <>
@@ -55,3 +62,5 @@ export default function SearchBox() {
     </>
   );
 }
+
+export default SearchBox
